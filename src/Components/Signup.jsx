@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaUserPlus, FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../Firebase";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -20,21 +22,50 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     // Add validation to check if passwords match
     if (formData.password !== formData.confirmPassword) {
       toast.error("Passwords don't match!");
       return;
     }
-    // Show success notification
-    toast.success(`Account created successfully! Welcome, ${formData.name}!`, {
-      position: "top-right",
-      autoClose: 3000,
-    });
 
-    // Redirect to login page after successful signup
-    navigate("/login");
+    try {
+      // Create user with Firebase
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        formData.email,
+        formData.password
+      );
+
+      // Update user profile with display name
+      await updateProfile(userCredential.user, {
+        displayName: formData.name,
+      });
+
+      // Show success notification
+      toast.success(
+        `Account created successfully! Welcome, ${formData.name}!`,
+        {
+          position: "top-right",
+          autoClose: 3000,
+        }
+      );
+
+      // Redirect to login page after successful signup
+      navigate("/login");
+    } catch (error) {
+      // Show error notification
+      toast.error(
+        error.message || "Failed to create account. Please try again.",
+        {
+          position: "top-right",
+          autoClose: 3000,
+        }
+      );
+      console.error("Signup error:", error);
+    }
   };
 
   return (

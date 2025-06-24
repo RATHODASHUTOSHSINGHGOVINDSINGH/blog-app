@@ -3,6 +3,8 @@ import { Link, useNavigate, useLocation } from "react-router";
 import { FaSignInAlt } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
 import { toast } from "react-toastify";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../Firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +17,7 @@ const Login = () => {
 
   // Get the redirect path or default to home
   const from = location.state?.from?.pathname || "/";
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,18 +27,21 @@ const Login = () => {
     }
 
     try {
-      setError("");
- 
-
-      // Simulate successful login for demo
+      // Sign in with Firebase
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      
+      // Get user data from Firebase
       const userData = {
-        id: 1,
-        name: "Test User",
-        email: email,
-         
+        id: userCredential.user.uid,
+        name: userCredential.user.displayName || "User",
+        email: userCredential.user.email,
       };
 
+      // Update auth context
       login(userData);
+
+      // Clear any previous errors
+      setError("");
 
       // Show success toast notification
       toast.success(`Welcome back, ${userData.name}!`, {
@@ -53,7 +58,7 @@ const Login = () => {
         position: "top-right",
         autoClose: 3000,
       });
-      console.error(err);
+      console.error("Login error:", err);
     }
   };
 
@@ -103,14 +108,8 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
             placeholder="Enter your password"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  
-            title="Password must be at least 8 characters and include uppercase, lowercase, number and special character"
             required
           />
-          <p className="text-xs text-gray-500 mt-1">
-            Password must contain at least 8 characters, including uppercase,
-            lowercase, number and special character.
-          </p>
         </div>
 
         <button
