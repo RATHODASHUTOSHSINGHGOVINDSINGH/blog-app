@@ -14,31 +14,40 @@ Most blogging platforms either require complex setup or don’t offer personal c
  
 
 ✅ **My solution:**
-
 🔐 Firebase Auth for **secure login/signup**
+
 📝 Only authenticated users can **Add ✍️ / Edit ✏️ / Delete ❌** their own blog posts
+
 🧑‍💻 Full content ownership — no one else can modify your posts
+
 🎨 Clean UI powered by Tailwind CSS
+
 🌐 Hosted seamlessly on Vercel
 
 ---
 
 ✨ **Key Features:**
-
 ✅ Firebase Auth (Email/password sign-up and login)
+
 ✅ Protected Routes using `React Router`
+
 ✅ Add, Edit, Delete blogs — but **only if you're the owner**
+
 ✅ Responsive UI with Tailwind CSS
+
 ✅ Deployed on Vercel with blazing fast performance
 
 ---
 
 📚 **What I learned while building this:**
-
 🔐 Authentication & Authorization using Firebase
+
 🔄 React hooks (useState, useEffect, useContext)
+
 🚦 Route protection using `useNavigate` & `useLocation`
+
 🧠 Real-world UX problems and how to solve them
+
 💻 Clean, component-driven architecture with DRY code
 
 ---
