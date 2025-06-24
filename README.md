@@ -1,7 +1,5 @@
 🚀 **My Blog App with Firebase Auth is Live!**
 
-I'm thrilled to share that I’ve built and deployed a secure and dynamic **Blog App** using **React + Firebase Authentication**! 🎉
-
 **Tech Stack:** React + Vite, React Router, Firebase Auth, Tailwind CSS
 ---
  **Code:** https://github.com/RATHODASHUTOSHSINGHGOVINDSINGH/blog-app
