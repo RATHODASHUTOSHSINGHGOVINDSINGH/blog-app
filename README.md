@@ -1,11 +1,11 @@
- 🚀 **My Blog App with Firebase Auth is Live!**
+🚀 **My Blog App with Firebase Auth is Live!**
 
 I'm thrilled to share that I’ve built and deployed a secure and dynamic **Blog App** using **React + Firebase Authentication**! 🎉
 
 🔹 **Tech Stack:** React + Vite, React Router, Firebase Auth, Tailwind CSS
 🔹 **Hosted on:** Vercel
-🔹 **Code:**  https://github.com/RATHODASHUTOSHSINGHGOVINDSINGH/blog-app
-🔹 **Live:**  https://blog-app-ashutosh-rathod-projects.vercel.app/
+🔹 **Code:** https://github.com/RATHODASHUTOSHSINGHGOVINDSINGH/blog-app
+🔹 **Live:** https://blog-app-ashutosh-rathod-projects.vercel.app/
 
 ---
 
@@ -86,14 +86,14 @@ export default {
 ### 3. Configure the Vite Plugin
 
 ```js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: '/',
+  base: "/",
   plugins: [react(), tailwindcss()],
-})
+});
 ```
 
 ### 4. Install React Router v7
@@ -105,12 +105,12 @@ npm install react-router
 Wrap your app in `main.jsx`:
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router";
+import App from "./App";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>
@@ -165,7 +165,7 @@ Then:
 ## Step 2: Install Firebase SDK
 
 ```bash
-npm install firebase  
+npm install firebase
 ```
 
 ## Step 3: Setup Firebase SDK
@@ -182,7 +182,7 @@ const firebaseConfig = {
   projectId: "your-project-id",
   storageBucket: "your-project.appspot.com",
   messagingSenderId: "xxxx",
-  appId: "xxxx"
+  appId: "xxxx",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -228,10 +228,8 @@ Restart server:
 npm run dev
 ```
 
-## 🌐 Deployment  
+## 🌐 Deployment
 
 1. Push to GitHub
 2. Deploy from Vercel
 3. Add domain in Firebase Auth → Authorized Domains
-
- 
