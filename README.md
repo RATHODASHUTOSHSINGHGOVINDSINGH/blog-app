@@ -4,6 +4,7 @@ I'm thrilled to share that I’ve built and deployed a secure and dynamic **Blog
 
 🔹 **Tech Stack:** React + Vite, React Router, Firebase Auth, Tailwind CSS
 🔹 **Hosted on:** Vercel
+
 🔹 **Code:** https://github.com/RATHODASHUTOSHSINGHGOVINDSINGH/blog-app
 🔹 **Live:** https://blog-app-ashutosh-rathod-projects.vercel.app/
 
@@ -159,7 +160,7 @@ Then:
 ## Step 1: Create Firebase Project
 
 1. Go to [Firebase Console](https://console.firebase.google.com)
-2. Add project → Name it `vite-blog-auth`
+2. Add project → Name it `blog-app`
 3. Register Web App → Copy `firebaseConfig`
 
 ## Step 2: Install Firebase SDK
