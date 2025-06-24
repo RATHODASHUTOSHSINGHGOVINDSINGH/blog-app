@@ -14,6 +14,7 @@ Most blogging platforms either require complex setup or don’t offer personal c
  
 
 ✅ **My solution:**
+
 🔐 Firebase Auth for **secure login/signup**
 
 📝 Only authenticated users can **Add ✍️ / Edit ✏️ / Delete ❌** their own blog posts
@@ -27,6 +28,7 @@ Most blogging platforms either require complex setup or don’t offer personal c
 ---
 
 ✨ **Key Features:**
+
 ✅ Firebase Auth (Email/password sign-up and login)
 
 ✅ Protected Routes using `React Router`
@@ -40,6 +42,7 @@ Most blogging platforms either require complex setup or don’t offer personal c
 ---
 
 📚 **What I learned while building this:**
+
 🔐 Authentication & Authorization using Firebase
 
 🔄 React hooks (useState, useEffect, useContext)
