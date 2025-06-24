@@ -4,8 +4,8 @@ I'm thrilled to share that I’ve built and deployed a secure and dynamic **Blog
 
 🔹 **Tech Stack:** React + Vite, React Router, Firebase Auth, Tailwind CSS
 🔹 **Hosted on:** Vercel
-🔹 **Code:** \[GitHub Repo Link Here]
-🔹 **Live:** \[Live App Link Here]
+🔹 **Code:**  https://github.com/RATHODASHUTOSHSINGHGOVINDSINGH/blog-app
+🔹 **Live:**  https://blog-app-ashutosh-rathod-projects.vercel.app/
 
 ---
 
@@ -107,7 +107,7 @@ Wrap your app in `main.jsx`:
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -165,7 +165,7 @@ Then:
 ## Step 2: Install Firebase SDK
 
 ```bash
-npm install firebase react-router-dom
+npm install firebase  
 ```
 
 ## Step 3: Setup Firebase SDK
@@ -198,7 +198,7 @@ export const auth = getAuth(app);
 📄 **src/App.jsx**
 
 ```jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -228,7 +228,7 @@ Restart server:
 npm run dev
 ```
 
-## 🌐 Deployment Recap
+## 🌐 Deployment  
 
 1. Push to GitHub
 2. Deploy from Vercel
