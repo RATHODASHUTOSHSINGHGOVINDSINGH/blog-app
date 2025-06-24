@@ -7,13 +7,13 @@ I'm thrilled to share that I’ve built and deployed a secure and dynamic **Blog
 🔹 **Code:** https://github.com/RATHODASHUTOSHSINGHGOVINDSINGH/blog-app
 🔹 **Live:** https://blog-app-ashutosh-rathod-projects.vercel.app/
 
----
+ 
 
 💡 **Real-world problem:**
 
 Most blogging platforms either require complex setup or don’t offer personal control over content. People want a **secure, clean, and simple** place to publish their thoughts — where **only they** can manage their posts.
 
----
+ 
 
 ✅ **My solution:**
 
