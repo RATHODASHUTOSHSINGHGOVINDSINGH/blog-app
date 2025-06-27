@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { useAuth } from '../context/AuthContext';
 import { FaArrowRight, FaBlog, FaUserFriends, FaEnvelope } from 'react-icons/fa';
 
 const Home = () => {
+   const { currentUser } = useAuth();
   return (
     <div className="bg-gradient-to-b from-purple-700 to-purple-900 min-h-screen text-white">
       {/* Hero Section */}
@@ -52,8 +54,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
-      {/* CTA Section */}
+      {
+        !currentUser &&(
       <div className="bg-purple-800 py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-6">Ready to start your blogging journey?</h2>
@@ -62,6 +64,10 @@ const Home = () => {
           </Link>
         </div>
       </div>
+       ) }
+      
+      
+       
     </div>
   );
 };
